@@ -49,6 +49,7 @@ class TranscriptedResponse(BaseModel):
     processing_time_ms: Optional[int]=None
     language: Optional[str] = None
     confidence: Optional[float] = None
+    message: Optional[str] = None
 
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
